@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "labyrinth-treasure"
+version = "0.1.0"
+description = "Text adventure \"Labyrinth of Treasure\""
+authors = ["FedotovAleksandr2601 <yovugarocu45@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.15.0"
+
+[tool.poetry.scripts]
+labyrinth = "labyrinth_treasure.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
