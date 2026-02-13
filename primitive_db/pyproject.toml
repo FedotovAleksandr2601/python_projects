@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "primitive_db"
+version = "0.1.0"
+description = "Primitive file-based database for study project"
+authors = ["FedotovAleksandr2601 <yovugarocu45@yandex.ru>"]
+readme = "README.md"
+packages = [
+  { include = "primitive_db" }
+]
+
+[tool.poetry.scripts]
+project = "primitive_db.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+prompt-toolkit = "^3.0.0"
+prettytable = "^3.17.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.15.0"
+mypy = "^1.0.0"
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
